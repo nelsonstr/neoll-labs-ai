@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neoll Labs AI — Platform Documentation</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --accent: #ef4444;
+      --accent-hover: #dc2626;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1.5rem; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 0.5rem; }
+    .badge { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: var(--accent); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; }
+    
+    .hero { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem 2rem; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .hero h1 { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    .hero p { color: var(--muted); font-size: 1.1rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; transition: transform 0.2s, border-color 0.2s; }
+    .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text); display: flex; align-items: center; gap: 0.5rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+    .tag { display: inline-block; background: #1e293b; color: #94a3b8; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 6px; margin-right: 0.4rem; margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: var(--card-bg); border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+    th, td { padding: 0.85rem 1rem; text-align: left; font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+    th { background: #161e2e; color: #d1d5db; font-weight: 600; }
+    td strong { color: #f3f4f6; }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 3.5rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><span>⚡</span> Neoll Labs AI Platform</div>
+      <div class="badge">Live Documentation Hub</div>
+    </header>
+
+    <div class="hero">
+      <h1>Autonomous Multi-Agent Enterprise Engine</h1>
+      <p>Orchestrating Paperclip AI control planes, Hermes multi-bot squads, Boston specialized skills, and Vercel staging-first delivery pipelines.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3><span>🏢</span> Paperclip Control Plane</h3>
+        <p>Embedded PostgreSQL control plane organizing companies, org charts, budgets, and automated Telegram issue ingestion.</p>
+        <div class="tag">PostgreSQL 54329</div>
+        <div class="tag">REST API 3100</div>
+        <div class="tag">5 Companies</div>
+      </div>
+
+      <div class="card">
+        <h3><span>🤖</span> Hermes Autonomous Squad</h3>
+        <p>Specialized human-toned AI agents: Sales (Marco), PO (Elena), Legal (Sofia), Ops (Pedro), and CI/CD Engine.</p>
+        <div class="tag">@BrozisBot</div>
+        <div class="tag">@PedroAlmeidaBot</div>
+        <div class="tag">@LuisLusoBot</div>
+        <div class="tag">@jaime_botas_bot</div>
+      </div>
+
+      <div class="card">
+        <h3><span>🧠</span> Boston Skills Engine</h3>
+        <p>Procedural memory skills for channel-first scoping, button review feedback, contract analysis, and hot-fix micro-loops.</p>
+        <div class="tag">multi-channel-sales-factory</div>
+        <div class="tag">legal-adviser</div>
+        <div class="tag">collabsquad</div>
+      </div>
+
+      <div class="card">
+        <h3><span>🚀</span> Vercel Staging Pipeline</h3>
+        <p>Strict staging-first deployment gate with interactive feedback widgets and 1-click button promotion to production.</p>
+        <div class="tag">Preview Branches</div>
+        <div class="tag">Deploy Hooks</div>
+        <div class="tag">*.neoll-labs.com</div>
+      </div>
+    </div>
+
+    <h2 style="font-size: 1.4rem; margin-bottom: 1rem;">Active Companies & Telegram Routing</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Company / Venture</th>
+          <th>Telegram Topic</th>
+          <th>Dedicated Bot</th>
+          <th>Role / Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Neoll Labs Tech & AI Holdings</strong></td>
+          <td>Topic #1 (Geral / HQ)</td>
+          <td>@PedroAlmeidaBot</td>
+          <td>Executive Parent Umbrella</td>
+        </tr>
+        <tr>
+          <td><strong>Chat2App</strong></td>
+          <td>Topic #62 (chat2app)</td>
+          <td>@BrozisBot</td>
+          <td>Autonomous App Factory</td>
+        </tr>
+        <tr>
+          <td><strong>Globex Corp</strong></td>
+          <td>Topic #53 (pitch-globex-corp)</td>
+          <td>@globexcorp_bot</td>
+          <td>Cloud Migration Pitch</td>
+        </tr>
+        <tr>
+          <td><strong>Eco Swimming Pool</strong></td>
+          <td>Topic #55 (low-footprint-swimming-pool)</td>
+          <td>@LuisLusoBot</td>
+          <td>Venture Branch (Software by Neoll)</td>
+        </tr>
+        <tr>
+          <td><strong>Tertul-IA Community</strong></td>
+          <td>Topic #58 (tertul-ia)</td>
+          <td>@jaime_botas_bot</td>
+          <td>AI Salons (Software by Neoll)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>
+      Neoll Labs AI &bull; Lead Architect: Nelson Lourenço &bull; Synced automatically via Hermes Software Factory
+    </footer>
+  </div>
+</body>
+</html>
