@@ -1,0 +1,80 @@
+name: Neoll Labs Tech & AI Holdings
+slug: neoll-labs-tech
+description: Parent umbrella organization aggregating all internal IT, AI platforms,
+  and software factory ventures under neoll-labs.com
+status: active
+governance:
+  founder: Nelson Lourenço
+  scope: Parent holding company for IT & AI venture aggregation
+  deployment_standard: 'Vercel Always (scope: neoll-labs-projects, subdomains under
+    neoll-labs.com)'
+  promotion_gate: Requires Client or Sales explicit button approval on staging
+aggregated_ventures:
+- name: Chat2App
+  slug: chat2app
+  domain: chat2app.neoll-labs.com
+- name: Globex Corp
+  slug: globex-corp
+  domain: globex-corp.neoll-labs.com
+- name: Eco Swimming Pool
+  slug: eco-swimming-pool
+  domain: eco-swimming-pool.neoll-labs.com
+- name: Tertul-IA Community
+  slug: tertul-ia
+  domain: tertul-ia.neoll-labs.com
+org_chart:
+- id: nelson
+  name: Nelson Lourenço
+  role: Founder & Group CTO
+  reports_to: null
+  authority:
+  - architecture
+  - group_strategy
+  - prod_promotion
+  - budget
+- id: marco
+  name: Marco Silva
+  role: Group Sales & Commercial Lead
+  reports_to: nelson
+  hermes_profile: sales-lead
+  authority:
+  - qualification
+  - commercial_terms
+- id: elena
+  name: Elena Rostova
+  role: Group Product Owner
+  reports_to: nelson
+  hermes_profile: pool-pm
+  authority:
+  - portfolio_scoping
+  - roadmap
+- id: sofia
+  name: Sofia Sterling
+  role: General Legal Counsel & Tech Compliance Partner
+  reports_to: nelson
+  hermes_profile: legal-counsel
+  authority:
+  - contracts
+  - ip_governance
+  - compliance
+- id: cicd
+  name: Neoll Delivery Engine
+  role: Unified CI/CD Worker
+  reports_to: elena
+  hermes_profile: default
+  authority:
+  - git_commit
+  - vercel_deploy
+channels:
+  telegram_forum_topic:
+    community: Neoll-Labs.tlg
+    topic_name: Geral / HQ
+    topic_id: 1
+    mode: command_center
+    bridge_status: connected
+    bot_token_env: "NEOLL_LABS_TECH_BOT_TOKEN"
+    bot_token: "9056176216:AAHIsx6_6VJthbGkjWks2mYzTCg7xe-LbX8"
+    bot_username: "@neoll_labs_tech_bot"
+  deployments:
+    team_scope: neoll-labs-projects
+    base_domain: neoll-labs.com

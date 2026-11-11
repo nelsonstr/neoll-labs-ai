@@ -1,0 +1,72 @@
+name: Tertul-IA Community
+slug: tertul-ia
+description: AI Community Hub, Meetups, Discussions, and Knowledge Sharing
+status: active
+governance:
+  head_of_engineering: Nelson Lourenço
+  deployment_standard: 'Vercel Always (scope: neoll-labs-projects, software provided
+    by neoll-labs.com)'
+  promotion_gate: Requires Client or Sales explicit button approval
+  business_model: Parent brand (neoll-labs.com) provides the underlying software platform
+    & infrastructure as a service (SaaS) to brand-operated venture branches.
+org_chart:
+- id: ceo
+  name: Nelson Lourenço
+  role: Chief Executive Officer
+  reports_to: null
+  hermes_profile: ceo
+  authority:
+  - strategy
+  - vision
+  - governance
+- id: community-lead
+  name: Raphael Gomes
+  role: Community Lead
+  reports_to: ceo
+  hermes_profile: aicom-meetups
+  authority:
+  - meetups
+  - discord
+  - telegram
+  - engagement
+- id: ai-evangelist
+  name: Pedro Duarte
+  role: AI Evangelist
+  reports_to: ceo
+  hermes_profile: aicom-online
+  authority:
+  - talks
+  - thought-leadership
+  - ecosystem
+- id: content-specialist
+  name: Inês Matos
+  role: Content Specialist
+  reports_to: community-lead
+  hermes_profile: aicom-content
+  authority:
+  - blogs
+  - newsletters
+  - social
+- id: pr-specialist
+  name: José Moreto
+  role: PR & Comms Specialist
+  reports_to: community-lead
+  hermes_profile: comms-lead
+  authority:
+  - announcements
+  - media
+  - partnerships
+channels:
+  telegram_forum_topic:
+    community: Neoll-Labs.tlg
+    topic_name: tertul-ia
+    mode: channel_first
+    topic_id: 58
+    bridge_status: connected
+    bot_token_env: "TERTUL_IA_BOT_TOKEN"
+    bot_token: "9197841083:AAEtcOn5OspwyalNX2ZuC0KymuANJtDmI4o"
+    bot_username: "@jaime_botas_bot"
+  deployments:
+    staging_url: https://tertul-ia-rcaeskzmc-neoll-labs-projects.vercel.app
+    production_url: https://tertul-ia.vercel.app
+    github_repo: https://github.com/nelsonstr/tertul-ia

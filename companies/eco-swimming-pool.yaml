@@ -1,0 +1,106 @@
+name: Eco Swimming Pool
+slug: eco-swimming-pool
+description: Sustainable & Eco-Friendly Swimming Pool Accessories Online Store
+status: active
+governance:
+  head_of_engineering: Nelson Lourenço
+  deployment_standard: 'Vercel Always (scope: neoll-labs-projects, software provided
+    by neoll-labs.com)'
+  promotion_gate: Requires Client or Sales explicit button approval
+  business_model: Parent brand (neoll-labs.com) provides the underlying software platform
+    & infrastructure as a service (SaaS) to brand-operated venture branches.
+org_chart:
+- id: ceo
+  name: Nelson Lourenço
+  role: Chief Executive Officer
+  reports_to: null
+  hermes_profile: ceo
+  authority:
+  - strategy
+  - budget
+  - governance
+- id: cmo
+  name: Carolina Mendes
+  role: Chief Marketing Officer
+  reports_to: ceo
+  hermes_profile: cmo
+  authority:
+  - brand
+  - acquisition
+  - campaigns
+- id: cro
+  name: Tiago Sousa
+  role: Chief Revenue Officer
+  reports_to: ceo
+  hermes_profile: cro
+  authority:
+  - sales
+  - partnerships
+  - revenue
+- id: sales-lead
+  name: Marco Silva
+  role: Sales Specialist
+  reports_to: cro
+  hermes_profile: sales-lead
+  authority:
+  - outreach
+  - closing
+  - b2b
+- id: marketing-lead
+  name: Rute Loureiro
+  role: Marketing Specialist
+  reports_to: cmo
+  hermes_profile: marketing-lead
+  authority:
+  - content
+  - social
+  - ads
+- id: seo
+  name: Marta Lima
+  role: SEO Specialist
+  reports_to: cmo
+  hermes_profile: seo
+  authority:
+  - seo
+  - rankings
+  - content-strategy
+- id: frontend
+  name: João Rego
+  role: Frontend Engineer
+  reports_to: ceo
+  hermes_profile: frontend
+  authority:
+  - react
+  - nextjs
+  - ui
+- id: backend
+  name: Rodrigo Lopes
+  role: Backend Engineer
+  reports_to: ceo
+  hermes_profile: backend
+  authority:
+  - api
+  - database
+  - ecommerce
+- id: support-lead
+  name: Aaron Ant
+  role: Customer Support Lead
+  reports_to: ceo
+  hermes_profile: support-lead
+  authority:
+  - tickets
+  - customer-success
+channels:
+  telegram_forum_topic:
+    community: Neoll-Labs.tlg
+    topic_name: low-footprint-swimming-pool
+    mode: channel_first
+    topic_id: 55
+    bridge_status: connected
+    bot_token_env: "ECO_SWIMMING_POOL_BOT_TOKEN"
+    bot_token: "9236421974:AAEgA1q-AQBUOxsNvEC7ESoAPZD9YnJ0TWs"
+    bot_username: "@eco_swimming_pool_bot"
+  deployments:
+    staging_url: https://eco-swimming-pool-rcaeskzmc-neoll-labs-projects.vercel.app
+    production_url: https://eco-swimming-pool.vercel.app
+    github_repo: https://github.com/nelsonstr/eco-swimming-pool

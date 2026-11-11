@@ -1,0 +1,79 @@
+name: Chat2App
+slug: chat2app
+description: 'Zero to Hero: Chat-Driven Autonomous App Factory'
+status: active
+governance:
+  head_of_engineering: Nelson Lourenço
+  deployment_standard: 'Vercel Always (scope: neoll-labs-projects)'
+  promotion_gate: Requires Client or Sales explicit button approval
+org_chart:
+- id: nelson
+  name: Nelson Lourenço
+  role: Lead Architect & Founder
+  reports_to: null
+  authority:
+  - architecture
+  - prod_promotion
+  - budget
+- id: marco
+  name: Marco Silva
+  role: Client Delivery Partner (Sales Lead)
+  reports_to: nelson
+  hermes_profile: sales-lead
+  authority:
+  - qualification
+  - commercial_terms
+  - staging_approval
+  responsibilities:
+  - Initial onboarding and commercial terms in Telegram dedicated topic
+  - Run button-driven qualification questionnaire
+  - Provide fast-track staging approval
+- id: elena
+  name: Elena Rostova
+  role: Product Owner
+  reports_to: nelson
+  hermes_profile: pool-pm
+  authority:
+  - scope_locking
+  - ticket_triage
+  - review_gates
+  responsibilities:
+  - Lock user stories and feature specs
+  - Deliver staging preview link with interactive feedback buttons
+  - Triage client change requests
+- id: sofia
+  name: Sofia Sterling
+  role: Legal Counsel & Tech Compliance Partner
+  reports_to: nelson
+  hermes_profile: legal-counsel
+  authority:
+  - contract_drafting
+  - nda_approval
+  - ip_governance
+  - compliance_signoff
+- id: cicd
+  name: Neoll Delivery Engine
+  role: Build & Deploy Worker
+  reports_to: elena
+  hermes_profile: default
+  authority:
+  - git_commit
+  - vercel_deploy
+  responsibilities:
+  - Automated git worktree scaffolding and branch pushes
+  - Deploy first to Vercel Staging preview
+  - Promote to Vercel Production on sign-off
+channels:
+  telegram_forum_topic:
+    community: Neoll-Labs.tlg
+    topic_name: chat2app
+    mode: channel_first
+    topic_id: 62
+    bridge_status: connected
+    bot_token_env: "CHAT2APP_BOT_TOKEN"
+    bot_token: "9267343953:AAGZUh7jtHuCJHWTyf8LFNHqNvJrgQ6SWFQ"
+    bot_username: "@chat2app_bot"
+  deployments:
+    staging_url: https://chat2app-pitch-rcaeskzmc-neoll-labs-projects.vercel.app
+    production_url: https://chat2app-pitch.vercel.app
+    github_repo: https://github.com/nelsonstr/chat2app-pitch

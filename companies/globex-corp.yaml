@@ -1,0 +1,66 @@
+name: Globex Corp
+slug: globex-corp
+description: Autonomous Cloud Migration Architecture
+status: active
+governance:
+  head_of_engineering: Nelson Lourenço
+  deployment_standard: 'Vercel Always (scope: neoll-labs-projects)'
+  promotion_gate: Requires Client or Sales explicit button approval
+org_chart:
+- id: nelson
+  name: Nelson Lourenço
+  role: Lead Architect & Founder
+  reports_to: null
+  authority:
+  - architecture
+  - prod_promotion
+  - budget
+- id: marco
+  name: Marco Silva
+  role: Client Delivery Partner (Sales Lead)
+  reports_to: nelson
+  hermes_profile: sales-lead
+  authority:
+  - qualification
+  - commercial_terms
+  - staging_approval
+- id: elena
+  name: Elena Rostova
+  role: Product Owner
+  reports_to: nelson
+  hermes_profile: pool-pm
+  authority:
+  - scope_locking
+  - ticket_triage
+  - review_gates
+- id: sofia
+  name: Sofia Sterling
+  role: Legal Counsel & Tech Compliance Partner
+  reports_to: nelson
+  hermes_profile: legal-counsel
+  authority:
+  - contract_drafting
+  - nda_approval
+  - ip_governance
+  - compliance_signoff
+- id: cicd
+  name: Neoll Delivery Engine
+  role: Build & Deploy Worker
+  reports_to: elena
+  hermes_profile: default
+  authority:
+  - git_commit
+  - vercel_deploy
+channels:
+  telegram_forum_topic:
+    community: Neoll-Labs.tlg
+    topic_name: pitch-globex-corp
+    topic_id: 53
+    mode: channel_first
+    bridge_status: connected
+    bot_token_env: GLOBEX_CORP_BOT_TOKEN
+    bot_username: '@globexcorp_bot'
+  deployments:
+    staging_url: https://pitch-globex-corp-v2.vercel.app
+    production_url: https://pitch-globex-corp-v2.vercel.app
+    github_repo: https://github.com/nelsonstr/pitch-globex-corp-v2
