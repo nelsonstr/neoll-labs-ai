@@ -1,0 +1,92 @@
+name: ExpatHousing Portugal
+slug: expat-housing-pt
+description: Expat & Foreigner Real Estate Matchmaker (Buy, Sell, Rent Long-Term in
+  Portugal via FB, Telegram & Web)
+status: active
+governance:
+  parent_brand: neoll-labs.com
+  head_of_engineering: Nelson Lourenço
+  deployment_standard: 'Vercel Always (scope: neoll-labs-projects, subdomains under
+    neoll-labs.com)'
+  promotion_gate: Requires Client or Sales explicit button approval on staging
+  fee_structure:
+    long_term_rentals: 10% of gross rent OR 1 month rent for leases >= 12 months
+    sales_commission: 4% of total transaction value
+org_chart:
+- id: nelson
+  name: Nelson Lourenço
+  role: Founder & Group CTO
+  reports_to: null
+  authority:
+  - architecture
+  - group_strategy
+  - prod_promotion
+  - budget
+- id: marco
+  name: Marco Silva
+  role: Expat Sales & Acquisition Lead
+  reports_to: nelson
+  hermes_profile: sales-lead
+  authority:
+  - lead_qualification
+  - foreigner_matching
+  - tour_scheduling
+  responsibilities:
+  - Handle foreign buyer & tenant inquiries from FB, Telegram, and web
+  - Run button-driven budget & preference qualification
+  - Coordinate remote property viewings and contract closures
+- id: elena
+  name: Elena Rostova
+  role: Product Owner & Listing Curator
+  reports_to: nelson
+  hermes_profile: pool-pm
+  authority:
+  - mls_curation
+  - portal_ux
+  - review_gates
+  responsibilities:
+  - Curate verified properties for sale and long-term rental
+  - Maintain geo-targeted property listings and multilingual search filters
+  - Deliver staging preview updates for portal enhancements
+- id: sofia
+  name: Sofia Sterling
+  role: Legal & Expat Relocation Counsel
+  reports_to: nelson
+  hermes_profile: legal-counsel
+  authority:
+  - lease_drafting
+  - cpcv_contracts
+  - nif_residency_compliance
+  responsibilities:
+  - Draft 10% / 1-month rental contracts and 4% sales agreements
+  - Ensure compliance with Portuguese rental laws (Novo Arrendamento Urbano)
+  - Provide legal guidance on NIF, D7 visas, and Golden Visa regulations
+- id: cicd
+  name: Neoll Delivery Engine
+  role: Unified CI/CD Worker
+  reports_to: elena
+  hermes_profile: default
+  authority:
+  - git_commit
+  - vercel_deploy
+channels:
+  telegram_forum_topic:
+    community: Neoll-Labs.tlg
+    topic_name: expat-housing-pt
+    topic_id: null
+    bot_token_env: "EXPAT_HOUSING_BOT_TOKEN"
+    bot_token: "9123270846:AAGMkg3Kc-7W8THrYx3gwdk6RnBF7UKmq5U"
+    bot_username: "@ManelBrunoBot"
+    bridge_status: connected
+    mode: channel_first
+  deployments:
+    staging_url: https://expat-housing-pt-staging.neoll-labs.com
+    production_url: https://expat.neoll-labs.com
+    github_repo: https://github.com/nelsonstr/expat-housing-pt
+  target_real_estate_networks:
+    networks:
+    - Telegram Expat & Real Estate Groups in Portugal
+    - Facebook Expat & Housing Groups (Lisbon, Porto, Algarve)
+    bot_username: '@expathousing_pt_bot'
+    qualification_flow: button_driven
+    fee_terms: 'Rent: 10% or 1 month | Sales: 4%'
