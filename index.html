@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neoll Labs AI — Organization & Agent Topology</title>
+  <title>Neoll Labs AI — Product Organization & Holdings Topology</title>
   <style>
     :root {
       --bg: #0b0f19;
@@ -16,31 +16,42 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     body { background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1.5rem; }
-    .container { max-width: 1100px; margin: 0 auto; }
+    .container { max-width: 1200px; margin: 0 auto; }
     header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .logo { font-size: 1.5rem; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 0.5rem; }
+    .logo { font-size: 1.6rem; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 0.5rem; }
     .badge { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: var(--accent); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; }
     
-    .hero { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem 2rem; margin-bottom: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-    .hero h1 { font-size: 2.2rem; margin-bottom: 0.75rem; }
-    .hero p { color: var(--muted); font-size: 1.1rem; }
+    .hero { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; margin-bottom: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .hero h1 { font-size: 2.4rem; margin-bottom: 0.75rem; background: linear-gradient(to right, #f9fafb, #9ca3af); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { color: var(--muted); font-size: 1.15rem; max-width: 800px; }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
-    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; transition: transform 0.2s, border-color 0.2s; }
-    .card:hover { transform: translateY(-3px); border-color: var(--accent); }
-    .card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #fff; display: flex; align-items: center; gap: 0.5rem; }
-    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
-    .tag { display: inline-block; background: rgba(255,255,255,0.05); color: #d1d5db; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-family: monospace; margin-right: 0.3rem; margin-bottom: 0.3rem; }
-
-    table { width: 100%; border-collapse: collapse; margin-bottom: 2.5rem; background: var(--card-bg); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
-    th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
-    th { background: rgba(239, 68, 68, 0.1); color: var(--accent); font-weight: 600; }
-    tr:last-child td { border-bottom: none; }
-
-    .flow-step { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 1rem; }
-    .flow-num { background: var(--accent); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem; flex-shrink: 0; }
+    /* Tree Diagram Styles */
+    .tree-container { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; margin-bottom: 3rem; }
+    .tree-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: #f3f4f6; }
     
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 1.5rem; margin-top: 3rem; }
+    .holding-node { background: linear-gradient(135deg, #1e293b, #0f172a); border: 2px solid var(--accent); border-radius: 12px; padding: 1.5rem; text-align: center; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(239, 68, 68, 0.15); }
+    .holding-node h3 { font-size: 1.3rem; color: #fff; margin-bottom: 0.3rem; }
+    .holding-node p { color: var(--muted); font-size: 0.9rem; }
+
+    .companies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; position: relative; }
+    .company-card { background: #1a2234; border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; }
+    .company-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .company-card h4 { font-size: 1.1rem; color: #fff; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: space-between; }
+    .company-card p { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.8rem; }
+    
+    .agent-pill { display: inline-flex; align-items: center; gap: 0.3rem; background: rgba(239, 68, 68, 0.1); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.2); padding: 0.2rem 0.5rem; border-radius: 6px; font-size: 0.75rem; font-family: monospace; margin-right: 0.3rem; margin-bottom: 0.3rem; }
+    
+    .squads-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+    .squad-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+    .squad-card h3 { font-size: 1.2rem; color: #fff; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .squad-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: var(--card-bg); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+    th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    th { background: #161e2e; color: var(--accent); font-weight: 600; }
+    td strong { color: #f3f4f6; }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
   </style>
 </head>
 <body>
@@ -49,156 +60,158 @@
       <div class="logo">
         <span>⚡ Neoll Labs AI</span>
       </div>
-      <div class="badge">Organization & Agent Topology v2.4</div>
+      <div class="badge">Product Organization & Holdings Topology v3.0</div>
     </header>
 
     <div class="hero">
-      <h1>Autonomous Enterprise Organogram & Connectivity</h1>
-      <p>Documentation registry for Neoll Labs' multi-agent software factory, Telegram forum orchestration, cryptographic PII proxies, and VoiceStudio neural voice cloning pipelines.</p>
+      <h1>Product Organization Holdings & Agent Network</h1>
+      <p>The formal architectural blueprint for Neoll Labs Holdings, our venture-backed product companies, dedicated Telegram forum topics, and autonomous multi-agent execution squads.</p>
     </div>
 
-    <h2 style="margin-bottom: 1rem; font-size: 1.5rem;">1. Organization Organogram & Squads</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>🏢 Executive & Governance</h3>
-        <p>Strategic architecture, final human-in-the-loop decisions, and multi-tenant Telegram forum supervision.</p>
-        <div>
-          <span class="tag">Nelson Lourenço (Founder / Lead Engineer)</span>
-          <span class="tag">Meta CEO Bot (@meta_ceo_bot)</span>
-        </div>
+    <!-- Product Organization Holdings Tree Diagram -->
+    <div class="tree-container">
+      <div class="tree-title">
+        <span>🏢</span> Neoll Labs Holdings & Product Venture Architecture
+      </div>
+      
+      <div class="holding-node">
+        <h3>Neoll Labs Tech & AI Holdings</h3>
+        <p>Parent Holding & Software Factory &bull; Lead Architect: Nelson Lourenço &bull; Executive Bot: @meta_ceo_bot</p>
       </div>
 
-      <div class="card">
-        <h3>🎯 Client Engagement & Sales</h3>
-        <p>Multilingual inbound qualification, quote generation, and real-time neural voice synthesis.</p>
-        <div>
-          <span class="tag">Aria Lead Routing Bot</span>
-          <span class="tag">VoiceStudio Clone ID 58f27135 (Nelson Voice)</span>
+      <div class="companies-grid">
+        <div class="company-card">
+          <h4>Sales & Pitches Factory <span style="font-size: 0.75rem; color: #ef4444;">Topic #52</span></h4>
+          <p>Automated client inbound qualification, budget assessment, and instant quote generation.</p>
+          <div>
+            <span class="agent-pill">🤖 Aria Sales Bot</span>
+            <span class="agent-pill">🎙️ Voice Clone 58f27135</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <h4>Festify <span style="font-size: 0.75rem; color: #ef4444;">Topic #54</span></h4>
+          <p>Autonomous event and social coordination app factory with real-time peer engagement.</p>
+          <div>
+            <span class="agent-pill">🤖 @BrozisBot</span>
+            <span class="agent-pill">⚡ Software Agent</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <h4>Globex Corp Pitch <span style="font-size: 0.75rem; color: #ef4444;">Topic #53</span></h4>
+          <p>Enterprise cloud migration pitch & custom multi-vector hybrid retrieval systems.</p>
+          <div>
+            <span class="agent-pill">🤖 @globexcorp_bot</span>
+            <span class="agent-pill">🔒 PII Proxy</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <h4>Eco Swimming Pool <span style="font-size: 0.75rem; color: #ef4444;">Topic #55</span></h4>
+          <p>Venture branch for automated water telemetry, IoT sensing, and low-footprint climate control.</p>
+          <div>
+            <span class="agent-pill">🤖 @LuisLusoBot</span>
+            <span class="agent-pill">📊 Telemetry Hub</span>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <h4>Tertul-IA Community <span style="font-size: 0.75rem; color: #ef4444;">Topic #58</span></h4>
+          <p>AI salons, intellectual discourse, and community engagement platform.</p>
+          <div>
+            <span class="agent-pill">🤖 @jaime_botas_bot</span>
+            <span class="agent-pill">💬 Salon Moderator</span>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="card">
-        <h3>📋 Product & Requirements</h3>
-        <p>Interactive requirements elicitation and acceptance criteria in dedicated client Telegram topics.</p>
+    <!-- Product Engineering & Operational Squads -->
+    <h2 style="font-size: 1.4rem; margin-bottom: 1rem;">Autonomous Product & Engineering Squads</h2>
+    <div class="squads-section">
+      <div class="squad-card">
+        <h3>📋 Product & Requirements Squad</h3>
+        <p>Collaborates with clients in dedicated Telegram forum topics to translate feature hypotheses into precise user stories, specs, and ticket backlogs.</p>
         <div>
           <span class="tag">Product Owner (PO) Agent</span>
+          <span class="tag">Backlog Synchronizer</span>
         </div>
       </div>
 
-      <div class="card">
-        <h3>⚡ Software Factory & Delivery</h3>
-        <p>Autonomous full-stack development agents executing in local git worktrees for sub-24h prototype delivery.</p>
+      <div class="squad-card">
+        <h3>⚡ Software Factory & Delivery Squad</h3>
+        <p>Autonomous full-stack development agents (Claude Code, Codex, OpenCode, Hermes) executing in git worktrees, writing React/Vite/Express code, and running tests.</p>
         <div>
-          <span class="tag">Claude Code / Codex / OpenCode / Hermes</span>
-          <span class="tag">Vercel Deployments (neoll-labs-projects)</span>
+          <span class="tag">Claude Code</span>
+          <span class="tag">Hermes Agent</span>
+          <span class="tag">Vercel Deployer</span>
         </div>
       </div>
 
-      <div class="card">
-        <h3>🛡️ Security & Governance</h3>
-        <p>Sub-10ms cryptographic PII anonymization, zero data leakage guardrails, and EU AI Act compliance.</p>
+      <div class="squad-card">
+        <h3>🛡️ Security & Telephony Squad</h3>
+        <p>Sub-10ms cryptographic PII sanitization proxies, EU AI Act compliance checks, and concurrent SIP conversational voice trunks.</p>
         <div>
-          <span class="tag">Security & PII Boundary Proxy</span>
-          <span class="tag">Audit Registry</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>🎙️ Operations & Telephony</h3>
-        <p>High-throughput SIP conversational voice trunks and automated logistics incident mitigation.</p>
-        <div>
-          <span class="tag">SIP Voice Telephony Bot</span>
-          <span class="tag">Supply Chain Hub Agent</span>
+          <span class="tag">PII Boundary Proxy</span>
+          <span class="tag">SIP Voice Trunks</span>
         </div>
       </div>
     </div>
 
-    <h2 style="margin-bottom: 1rem; font-size: 1.5rem;">2. Inter-Agent Connectivity Pipes</h2>
-    <div style="margin-bottom: 2.5rem;">
-      <div class="flow-step">
-        <div class="flow-num">1</div>
-        <div>
-          <strong>Inbound & Qualification:</strong> Client / Visitor ➔ <em>Aria Sales Bot & Voice Clone</em> (qualifies budget and creates private Telegram forum topic).
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">2</div>
-        <div>
-          <strong>Governance & Scoping:</strong> <em>Meta CEO Bot (@meta_ceo_bot)</em> ➔ Assigns topic to <em>Product Owner Agent</em> for interactive specs refinement.
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">3</div>
-        <div>
-          <strong>Autonomous Build:</strong> <em>Product Owner Agent</em> ➔ <em>AI Engineering Squad (Claude / Hermes)</em> builds code in git worktrees and runs tests.
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">4</div>
-        <div>
-          <strong>Vercel Staging & Review:</strong> <em>AI Engineering Squad</em> ➔ Deploys to Vercel (`neoll-labs.com`) with interactive Telegram inline buttons (Approve, Request Patch, Promote).
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">5</div>
-        <div>
-          <strong>Security Enforcement:</strong> <em>Security & PII Proxy</em> ➔ Monitors all message exchanges and LLM inferences (<10ms latency).
-        </div>
-      </div>
-    </div>
-
-    <h2 style="margin-bottom: 1rem; font-size: 1.5rem;">3. Active Telegram Forum Topics & Companies Registry</h2>
+    <!-- Comprehensive Registry Table -->
+    <h2 style="font-size: 1.4rem; margin-bottom: 1rem;">Complete Holdings & Agent Registry</h2>
     <table>
       <thead>
         <tr>
-          <th>Company / Project</th>
-          <th>Telegram Forum Topic</th>
-          <th>Agent Handle</th>
-          <th>Primary Focus</th>
+          <th>Company / Venture</th>
+          <th>Telegram Topic</th>
+          <th>Primary Bot / Agent</th>
+          <th>Mandate & Infrastructure</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Neoll Labs Tech & AI Holdings</strong></td>
-          <td>Topic #1 / Topic #51 (Deployments)</td>
+          <td><strong>Neoll Labs Holdings</strong></td>
+          <td>Topic #1 / #51</td>
           <td>@meta_ceo_bot</td>
-          <td>Executive Coordination & Vercel Deployments</td>
+          <td>Executive supervision, Vercel deployments (`neoll-labs.com`)</td>
         </tr>
         <tr>
           <td><strong>Sales & Pitches Factory</strong></td>
-          <td>Topic #52 (Sales & Pitches)</td>
-          <td>@meta_ceo_bot / Aria</td>
-          <td>Lead Qualification & Client Onboarding</td>
+          <td>Topic #52</td>
+          <td>Aria & Voice Clone 58f27135</td>
+          <td>Inbound lead qualification, neural voice synthesis</td>
+        </tr>
+        <tr>
+          <td><strong>Globex Corp Pitch</strong></td>
+          <td>Topic #53</td>
+          <td>@globexcorp_bot</td>
+          <td>Enterprise cloud migration & hybrid RAG</td>
         </tr>
         <tr>
           <td><strong>Festify</strong></td>
-          <td>Topic #54 (festify)</td>
+          <td>Topic #54</td>
           <td>@BrozisBot</td>
-          <td>Autonomous App Factory</td>
-        </tr>
-        <tr>
-          <td><strong>Globex Corp</strong></td>
-          <td>Topic #53 (pitch-globex-corp)</td>
-          <td>@globexcorp_bot</td>
-          <td>Cloud Migration Pitch</td>
+          <td>Autonomous event & social app factory</td>
         </tr>
         <tr>
           <td><strong>Eco Swimming Pool</strong></td>
-          <td>Topic #55 (low-footprint-swimming-pool)</td>
+          <td>Topic #55</td>
           <td>@LuisLusoBot</td>
-          <td>Venture Branch (Software by Neoll)</td>
+          <td>IoT water telemetry & low-footprint climate control</td>
         </tr>
         <tr>
           <td><strong>Tertul-IA Community</strong></td>
-          <td>Topic #58 (tertul-ia)</td>
+          <td>Topic #58</td>
           <td>@jaime_botas_bot</td>
-          <td>AI Salons (Software by Neoll)</td>
+          <td>AI salons, intellectual discourse & community engagement</td>
         </tr>
       </tbody>
     </table>
 
     <footer>
-      Neoll Labs AI &bull; Lead Architect: Nelson Lourenço &bull; Synced automatically via Hermes Software Factory
+      Neoll Labs AI &bull; Lead Architect: Nelson Lourenço &bull; Product Organization Topology &bull; Synced via Hermes Software Factory
     </footer>
   </div>
 </body>
