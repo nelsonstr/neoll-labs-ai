@@ -65,7 +65,7 @@ channels:
     bridge_status: connected
     bot_token_env: "TERTUL_IA_BOT_TOKEN"
     bot_token: "9197841083:AAEtcOn5OspwyalNX2ZuC0KymuANJtDmI4o"
-    bot_username: "@jaime_botas_bot"
+    bot_username: "@lucas_tertulia_bot"
   deployments:
     staging_url: https://tertul-ia-rcaeskzmc-neoll-labs-projects.vercel.app
     production_url: https://tertul-ia.vercel.app

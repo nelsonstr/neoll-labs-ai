@@ -76,7 +76,7 @@ channels:
     topic_id: null
     bot_token_env: "EXPAT_HOUSING_BOT_TOKEN"
     bot_token: "9123270846:AAGMkg3Kc-7W8THrYx3gwdk6RnBF7UKmq5U"
-    bot_username: "@expathousing_pt_bot"
+    bot_username: "@robert_expat_housing_bot"
     bridge_status: connected
     mode: channel_first
   deployments:
@@ -87,6 +87,6 @@ channels:
     networks:
     - Telegram Expat & Real Estate Groups in Portugal
     - Facebook Expat & Housing Groups (Lisbon, Porto, Algarve)
-    bot_username: "@expathousing_pt_bot"
+    bot_username: "@robert_expat_housing_bot"
     qualification_flow: button_driven
     fee_terms: 'Rent: 10% or 1 month | Sales: 4%'
