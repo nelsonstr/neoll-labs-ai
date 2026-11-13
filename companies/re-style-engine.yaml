@@ -1,0 +1,46 @@
+name: RE-Style Studio
+description: AI Virtual Staging & Real Estate Restyling Platform for Brokerages and MLS Marketing.
+github_repo: https://github.com/nelsonstr/re-style-engine
+team:
+  - id: nelson
+    name: Nelson Lourenço
+    role: Founder & Lead Architect
+    reports_to: null
+  - id: elena
+    name: Elena Rostova
+    role: Real Estate Marketing Lead
+    reports_to: nelson
+  - id: marcus
+    name: Marcus Vance
+    role: Broker Compliance & MLS Specialist
+    reports_to: nelson
+  - id: sophia
+    name: Sophia Chen
+    role: Interior Architectural Consultant
+    reports_to: nelson
+  - id: cicd
+    name: Neoll Delivery Engine
+    role: Unified CI/CD Worker
+    reports_to: nelson
+channels:
+  telegram_forum_topic:
+    community: Neoll-Labs.tlg
+    topic_name: re-style-engine
+    topic_id: 61
+    mode: command_center
+    bridge_status: connected
+    bot_token_env: "RE_STYLE_BOT_TOKEN"
+    bot_username: "@PedroAlmeidaBot"
+  deployments:
+    team_scope: neoll-labs-projects
+    base_domain: restyleshouse.studio
+    production_branch: main
+    staging_branch: develop
+features:
+  - AI Virtual Staging & Geometry Locking
+  - Multi-Room Palette Synchronization
+  - Exterior & Virtual Twilight Restyler
+  - MLS Marketing Flyer Deck Generator
+  - Enterprise Brokerage White-Label Suite
+  - GDPR & CCPA Compliance Center
+  - 21 Humanized Real Estate Guides & Blog
