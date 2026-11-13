@@ -71,7 +71,7 @@ channels:
     bridge_status: connected
     bot_token_env: "NEOLL_LABS_TECH_BOT_TOKEN"
     bot_token: "9056176216:***"
-    bot_username: "@PedroAlmeidaBot"
+    bot_username: "@meta_ceo_bot"
   deployments:
     team_scope: neoll-labs-projects
     base_domain: neoll-labs.com

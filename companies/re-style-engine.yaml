@@ -30,7 +30,7 @@ channels:
     mode: command_center
     bridge_status: connected
     bot_token_env: "RE_STYLE_BOT_TOKEN"
-    bot_username: "@PedroAlmeidaBot"
+    bot_username: "@meta_ceo_bot"
   deployments:
     team_scope: neoll-labs-projects
     base_domain: restyleshouse.studio

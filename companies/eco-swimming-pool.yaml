@@ -99,7 +99,7 @@ channels:
     bridge_status: connected
     bot_token_env: "ECO_SWIMMING_POOL_BOT_TOKEN"
     bot_token: "9236421974:AAEgA1q-AQBUOxsNvEC7ESoAPZD9YnJ0TWs"
-    bot_username: "@eco_swimming_pool_bot"
+    bot_username: "@LuisLusoBot"
   deployments:
     staging_url: https://eco-swimming-pool-rcaeskzmc-neoll-labs-projects.vercel.app
     production_url: https://eco-swimming-pool.vercel.app
