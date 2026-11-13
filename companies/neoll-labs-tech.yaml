@@ -10,18 +10,15 @@ governance:
     neoll-labs.com)'
   promotion_gate: Requires Client or Sales explicit button approval on staging
 aggregated_ventures:
-- name: Chat2App
-  slug: chat2app
-  domain: chat2app.neoll-labs.com
-- name: Globex Corp
-  slug: globex-corp
-  domain: globex-corp.neoll-labs.com
 - name: Eco Swimming Pool
   slug: eco-swimming-pool
   domain: eco-swimming-pool.neoll-labs.com
 - name: Tertul-IA Community
   slug: tertul-ia
   domain: tertul-ia.neoll-labs.com
+- name: RE-Style Studio
+  slug: re-style-engine
+  domain: restyleshouse.studio
 org_chart:
 - id: nelson
   name: Nelson Lourenço
