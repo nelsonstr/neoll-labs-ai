@@ -69,9 +69,9 @@ channels:
     topic_id: 1
     mode: command_center
     bridge_status: connected
-    bot_token_env: "NEOLL_LABS_TECH_BOT_TOKEN"
-    bot_token: "9056176216:***"
-    bot_username: "@herminio_neoll_bot"
+    bot_token_env: NEOLL_LABS_TECH_BOT_TOKEN
+    bot_token: 9056176216:***
+    bot_username: '@herminio_neoll_bot'
   deployments:
     team_scope: neoll-labs-projects
     base_domain: neoll-labs.com
